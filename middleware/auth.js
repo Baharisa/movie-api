@@ -15,7 +15,7 @@ const auth = (req, res, next) => {
     req.user = decoded.id; // Attach user ID to request
     next();
   } catch (err) {
-    console.error('❌ Invalid token:', err);
+    console.error(' Invalid token:', err);
     res.status(401).json({ error: 'Token is not valid' });
   }
 };
